@@ -1,4 +1,4 @@
-Stock LSTM Model & Prediction Analysis
+                                                        Stock LSTM Model & Prediction Analysis
 
 This repository contains code for training and evaluating LSTM models on historical stock data. It leverages Yahoo Finance data and TensorFlow to build predictive models for multiple stocks, then validates these models by generating predictions and performance graphs.
 
