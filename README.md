@@ -58,17 +58,17 @@ Visualization: Automatically creates and saves graphs that display historical pr
 Modular Code: Clean, well-documented code to allow easy customization and extension.
 
 
- stock_models/             # Directory where trained models are saved
-
- prediction_graphs/        # Directory where generated graphs are stored
- 
- model_generator.py        # Script for training the LSTM models
- 
- prediction_analysis.py    # Script for validating models and generating prediction graphs
- 
- requirements.txt          # List of required Python packages
- 
- .gitignore                # Git ignore file to exclude unnecessary files
+                                        stock_models/             # Directory where trained models are saved
+                                       
+                                        prediction_graphs/        # Directory where generated graphs are stored
+                                        
+                                        model_generator.py        # Script for training the LSTM models
+                                        
+                                        prediction_analysis.py    # Script for validating models and generating prediction graphs
+                                        
+                                        requirements.txt          # List of required Python packages
+                                        
+                                        .gitignore                # Git ignore file to exclude unnecessary files
 
 
 Requirements
