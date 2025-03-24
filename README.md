@@ -1,7 +1,9 @@
 Stock LSTM Model & Prediction Analysis
+
 This repository contains code for training and evaluating LSTM models on historical stock data. It leverages Yahoo Finance data and TensorFlow to build predictive models for multiple stocks, then validates these models by generating predictions and performance graphs.
 
 Table of Contents
+
 Overview
 
 Features
@@ -19,6 +21,7 @@ Graphs and Results
 License
 
 Overview
+
 This project consists of two main components:
 
 Model Generation (model_generator.py):
@@ -56,10 +59,15 @@ Modular Code: Clean, well-documented code to allow easy customization and extens
 
 
  stock_models/             # Directory where trained models are saved
+
  prediction_graphs/        # Directory where generated graphs are stored
+ 
  model_generator.py        # Script for training the LSTM models
+ 
  prediction_analysis.py    # Script for validating models and generating prediction graphs
+ 
  requirements.txt          # List of required Python packages
+ 
  .gitignore                # Git ignore file to exclude unnecessary files
 
 
@@ -88,15 +96,24 @@ pip install -r requirements.txt
 
 Usage
 1. Model Training
+
 Run the model generator script to download historical data, preprocess it, and train the LSTM model for each stock.
+
 python model_generator.py
 
 2. Prediction and Validation
+
+
 After training, run the prediction analysis script to validate the models and generate performance graphs:
+
 python prediction_analysis.py
+
+
 Predicted performance graphs will be saved in the prediction_graphs directory, and evaluation metrics will be printed to the console.
 
 Graphs and Results
+
+
 Each time you run prediction_analysis.py, a graph will be generated for each stock that shows:
 
 Historical Prices: Actual closing prices from the dataset.
@@ -112,9 +129,12 @@ Performance Metrics: MAE and RMSE annotated on the graph.
 You can add your generated graphs to the repository or share them as needed.
 
 License
+
 This project is licensed under the MIT License. See the LICENSE file for more details.
 
 Disclaimer
+
+
 Important: This project is provided for educational and experimental purposes only. The models generated from this project are not suitable for actual financial or stock market predictions due to:
 
 Simplified Modeling: The models are based solely on historical data and may not capture market complexities.
@@ -126,7 +146,12 @@ Risk of Loss: Using these predictions for real trading may result in financial l
 Always consult a professional financial advisor before making investment decisions.
 
 License
+
+
 This project is licensed under the MIT License. See the LICENSE file for more details.
+
+
+
 
 Feel free to further modify this README as your project evolves. Happy coding and experimentation!
 
