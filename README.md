@@ -1,4 +1,4 @@
-                                                        Stock LSTM Model & Prediction Analysis
+Stock LSTM Model & Prediction Analysis
 
 This repository contains code for training and evaluating LSTM models on historical stock data. It leverages Yahoo Finance data and TensorFlow to build predictive models for multiple stocks, then validates these models by generating predictions and performance graphs.
 
@@ -84,15 +84,15 @@ tensorflow
 All dependencies are listed in the requirements.txt file.
 
 Installation
-git clone https://github.com/RajjakAhmed/MultiStockL-STM-Model.git
-cd MultiStockL-STM-Model
+          git clone https://github.com/RajjakAhmed/MultiStockL-STM-Model.git
+          cd MultiStockL-STM-Model
 
 Create a virtual environment
-python -m venv venv
-source venv/bin/activate  # On Windows use: venv\\Scripts\\activate
+          python -m venv venv
+            source venv/bin/activate  # On Windows use: venv\\Scripts\\activate
 
 Install dependencies:
-pip install -r requirements.txt
+          pip install -r requirements.txt
 
 Usage
 1. Model Training
