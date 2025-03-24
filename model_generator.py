@@ -9,7 +9,7 @@ from datetime import datetime
 
 # Configuration
 TICKERS = ['AAPL', 'AMZN', 'GOOGL', 'TSLA', 'INFY', 'TM']  # List of stock tickers  # List of stock tickers
-LOOKBACK_DAYS = 60  # Number of days to look back for training
+LOOKBACK_DAYS = 6  # Number of days to look back for training
 START_DATE = '2015-01-01'  # Historical data start date
 
 # Create necessary directories
