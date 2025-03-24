@@ -22,7 +22,7 @@ def load_stock_data(ticker):
             raise ValueError("No data available")
         return df
     except Exception as e:
-        print(f"Erro fetching data for {ticker}: {str(e)}")
+        print(f"Error fetching data for {ticker}: {str(e)}")
         return None
 
 def validate_model(ticker):
