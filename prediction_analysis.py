@@ -68,6 +68,27 @@ def validate_model(ticker):
         mae = mean_absolute_error(actuals, predictions)
         rmse = np.sqrt(mean_squared_error(actuals, predictions))
         
+        # Plot results
+        plt.figure(figsize=(16, 8))
+        plt.plot(df.index, df['Close'], label='Historical Prices', alpha=0.5)
+        plt.plot(dates, predictions, label='Predictions', linestyle='--')
+        plt.scatter(dates, actuals, color='green', s=20, label='Actual Prices')
+
+        plt.title(f"{ticker} Model Performance: {TEST_START_DATE} to {datetime.today().strftime('%Y-%m-%d')}")
+        plt.xlabel('Date')
+        plt.ylabel('Price (USD)')
+        plt.axvline(pd.to_datetime(TRAIN_END_DATE), color='r', linestyle='--', label='Train/Test Split')
+        plt.legend()
+        plt.grid(True)
+
+        # Add metrics annotation
+        plt.annotate(f"MAE: ${mae:.2f}\nRMSE: ${rmse:.2f}",
+                    xy=(0.05, 0.85), xycoords='axes fraction',
+                    bbox=dict(boxstyle="round", alpha=0.1))
+
+        plt.savefig(f'prediction_graphs/{ticker}_validation.png', bbox_inches='tight')
+        plt.close()
+        
         # Print validation results
         print(f"\n{ticker} Model Validation:")
         print(f"Date Range: {dates[0].strftime('%Y-%m-%d')} to {dates[-1].strftime('%Y-%m-%d')}")
@@ -80,5 +101,7 @@ def validate_model(ticker):
         print("=" * 60)
 
 if __name__ == "__main__":
+    os.makedirs('prediction_graphs', exist_ok=True)
     for ticker in TICKERS:
         validate_model(ticker)
+
